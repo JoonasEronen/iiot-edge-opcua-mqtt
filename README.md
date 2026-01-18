@@ -27,6 +27,15 @@ This repository represents the author’s own implementation developed during th
 
 ---
 
+## High-level edge architecture
+
+- Reads simulated or live process data from an OPC UA server
+- Performs basic validation and structuring at the edge
+- Publishes MQTT messages using a UNS-inspired hierarchical topic model
+- Designed for continuous operation on a constrained edge gateway
+
+---
+
 ## Cloud overview (high level)
 
 In the thesis project, the edge component publishes MQTT messages to AWS IoT Core
