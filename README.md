@@ -1,7 +1,9 @@
 # IIoT Edge Component: OPC UA → MQTT (AWS Greengrass)
 
 Industrial IoT edge component developed as part of a bachelor’s thesis.  
-The component reads process data from an OPC UA server and publishes structured MQTT messages using a Unified Namespace (UNS)–style topic hierarchy.  
+
+The component reads process data from an OPC UA server and publishes structured MQTT messages using a Unified Namespace (UNS)–style topic hierarchy. 
+
 Designed to run as an AWS Greengrass V2 Java component on an edge gateway.
 
 ---
