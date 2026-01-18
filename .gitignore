@@ -1,0 +1,75 @@
+############################
+# Build artifacts (Maven)
+############################
+target/
+*.jar
+*.war
+*.ear
+
+############################
+# Eclipse IDE
+############################
+.project
+.classpath
+.settings/
+
+############################
+# Other IDEs (future-proof)
+############################
+.idea/
+*.iml
+.vscode/
+
+############################
+# Operating systems
+############################
+.DS_Store
+Thumbs.db
+desktop.ini
+
+############################
+# Logs & temp files
+############################
+*.log
+*.tmp
+*.bak
+*.swp
+
+############################
+# Security / OPSEC
+# NEVER commit secrets or certificates
+############################
+*.pem
+*.key
+*.crt
+*.cer
+*.der
+*.pfx
+*.p12
+*.jks
+*.keystore
+*.truststore
+*.env
+
+############################
+# Local configuration files
+# Publish only *.example.* versions
+############################
+effectiveConfig.yaml
+config.json
+config.yml
+secrets.json
+credentials.json
+
+############################
+# AWS / Greengrass local data
+############################
+greengrass/
+**/greengrass/
+
+############################
+# Generated / runtime data
+############################
+logs/
+tmp/
+out/

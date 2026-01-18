@@ -1,0 +1,34 @@
+{
+	"tags": [
+		{
+			"name": "\"Motor01_DB\".\"Status\".\"ActivePower_kW\"",
+			"mappedName": "Unit01/Motor01/Status/ActivePower_kW",
+			"namespaceIndex": 3,
+			"useThreshold": false,
+			"threshold": 0.2,
+			"thresholdType": "absolute",
+			"useThresholdSeconds": false,
+			"thresholdSeconds": 5
+		},
+		{
+			"name": "\"PressureSensor01_DB\".\"Status\".\"Scaled_Value\"",
+			"mappedName": "Unit01/PressureSensor01/Status/Pressure_bar",
+			"namespaceIndex": 3,
+			"useThreshold": false,
+			"threshold": 0.1,
+			"thresholdType": "absolute",
+			"useThresholdSeconds": false,
+			"thresholdSeconds": 5
+		},
+		{
+			"name": "\"ControlValve01_DB\".\"Status\".\"Scaled_Value\"",
+			"mappedName": "Unit01/ControlValve01/Status/Valve_Position",
+			"namespaceIndex": 3,
+			"useThreshold": false,
+			"threshold": 1,
+			"thresholdType": "absolute",
+			"useThresholdSeconds": false,
+			"thresholdSeconds": 5
+		}
+	]
+}

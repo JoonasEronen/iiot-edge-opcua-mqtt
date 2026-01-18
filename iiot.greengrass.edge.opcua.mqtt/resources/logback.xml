@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<!-- Console appender configuration. Logs are printed to standard output 
+		in readable format. -->
+	<appender name="STDOUT"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<!-- Suppress verbose third-party logs (non-critical debug/info). These 
+		produce excessive noise without actionable value. -->
+	<logger name="org.eclipse.milo" level="WARN" additivity="false" />
+	<logger name="io.netty" level="WARN" additivity="false" />
+
+	<!-- BLOCK Apache HTTP wire and header logs completely. These may contain 
+		plaintext AWS SecretString content! -->
+	<logger name="org.apache.http.wire" level="OFF"
+		additivity="false" />
+	<logger name="org.apache.http.headers" level="OFF"
+		additivity="false" />
+	<logger name="org.apache.http" level="ERROR" additivity="false" />
+
+	<!-- AWS SDK internals. ERROR level retains useful error messages without 
+		exposing payloads. -->
+	<logger name="software.amazon.awssdk" level="ERROR"
+		additivity="false" />
+	<logger name="software.amazon.awssdk.http.apache" level="ERROR"
+		additivity="false" />
+	<logger name="software.amazon.awssdk.request" level="OFF"
+		additivity="false" />
+	<logger name="software.amazon.awssdk.response" level="OFF"
+		additivity="false" />
+	<logger name="software.amazon.awssdk.services.secretsmanager"
+		level="OFF" additivity="false" />
+
+
+	<!-- Application root logger. Set to INFO for production. Change to DEBUG 
+		temporarily only when troubleshooting. -->
+	<root level="INFO">
+		<appender-ref ref="STDOUT" />
+	</root>
+
+</configuration>
