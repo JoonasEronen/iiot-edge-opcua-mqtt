@@ -26,6 +26,7 @@ This repository represents the author’s own implementation developed during th
 - Designed for **AWS Greengrass V2** (Java component model)
 - UNS-style hierarchical MQTT topic structure
 - Configuration via local resources and Greengrass configuration patterns
+- Designed for continuous operation on a constrained edge gateway
 
 ---
 
@@ -34,7 +35,10 @@ This repository represents the author’s own implementation developed during th
 - Reads simulated or live process data from an OPC UA server
 - Performs basic validation and structuring at the edge
 - Publishes MQTT messages using a UNS-inspired hierarchical topic model
-- Designed for continuous operation on a constrained edge gateway
+- Operates as a long-running edge component under AWS Greengrass
+
+This repository intentionally focuses on **edge responsibilities**;  
+cloud services are treated as managed infrastructure and are documented at a conceptual level in the thesis.
 
 ---
 
@@ -43,12 +47,17 @@ This repository represents the author’s own implementation developed during th
 In the thesis project, the edge component publishes MQTT messages to AWS IoT Core
 and was validated as part of a broader edge–cloud architecture.
 
-Cloud-side processing in the project utilized managed AWS services such as
-IoT Core rules, Lambda, DynamoDB, Timestream, SiteWise, and visualization tools
-including Grafana and QuickSight.
+Cloud-side processing in the project utilized managed AWS services such as:
+
+- AWS IoT Core (rules-based routing)
+- AWS Lambda
+- Amazon DynamoDB
+- Amazon Timestream
+- AWS IoT SiteWise
+- Visualization tools including Grafana and QuickSight
 
 This public repository focuses exclusively on the **edge component**
-and does not include environment-specific cloud infrastructure or automation.
+and does not include environment-specific cloud infrastructure, automation, or deployment code.
 
 ---
 
@@ -77,7 +86,8 @@ This edge component was developed as part of a bachelor’s thesis focusing on:
 
 ## Security & OPSEC
 
-All examples use generic identifiers and placeholder values.
+All examples use generic identifiers and placeholder values.  
+No credentials, certificates, device identifiers, or customer-specific configuration are included.
 
 ---
 
